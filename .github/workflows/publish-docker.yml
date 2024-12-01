@@ -25,4 +25,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ github.repository_owner }}/ue19-lab-05:latest
+        tags: ghcr.io/${{ ghcr.io/micke667/ue19-lab-05:latest }}/ue19-lab-05:latest
