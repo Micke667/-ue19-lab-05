@@ -1,5 +1,5 @@
 
-name:  name: Build and Publish Docker Image
+name:  Build and Publish Docker Image
 
 # Déclencheur du workflow, ici on veut que le workflow soit déclenché à chaque fois qu'on push sur la branche main
 on:
