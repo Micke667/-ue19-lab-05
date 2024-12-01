@@ -1,4 +1,4 @@
-name: Publish Docker Image
+name: Build, Scan, and Publish Docker Image
 
 on:
   push:
@@ -26,11 +26,11 @@ jobs:
           push: false  # Ne pas pousser encore l'image
 
       - name: Scan Docker image for vulnerabilities
-        uses: aquasecurity/trivy-action@v0.7.0
+        uses: aquasecurity/trivy-action@v0.8.0
         with:
-          image: ghcr.io/${{ github.actor }}/ue19-lab-05:latest
-          format: table
-          exit-code: 1  # Arrêter l'action si des vulnérabilités sont trouvées
+            image: ghcr.io/${{ github.actor }}/ue19-lab-05:latest
+            format: table
+            exit-code: 1
 
       - name: Push Docker image
         uses: docker/build-push-action@v4
